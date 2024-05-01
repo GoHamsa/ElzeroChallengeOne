@@ -17,8 +17,6 @@ console.log(my.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"];
 
 console.log(my.slice(-counter, counter)); // ["Elham", "Mazero"]
 
-console.log(
-  'Elham'.slice(0, -3).concat('Mazero'.reverse().slice(0, -3).reverse()),
-); // "Elzero"
+console.log('Elham'.slice(zero, -counter).concat('Mazero'[2])); // "Elzero"
 
 //console.log(); // "rO"
