@@ -1,53 +1,24 @@
-// If challenge
+/*
+  Array Challenge
+*/
 
-let a = 10;
+let zero = 0;
 
-/* if (a < 10) {
-  console.log(10);
-} else if (a >= 10 && a <= 40) {
-  console.log('10 to 40');
-} else if (a > 40) {
-  console.log('> 40');
-} else {
-  console.log('unknown');
-} */
+let counter = 3;
 
-a < 10
-  ? console.log(10)
-  : a >= 10 && a < 40
-  ? console.log('10 to 40')
-  : a > 40
-  ? console.log('> 40')
-  : console.log('unknown');
+let my = ['Ahmed', 'Mazero', 'Elham', 'Osama', 'Gamal', 'Ameer'];
 
-// Write with Ternary if syntax
+// Write Code Here
+console.log(my);
+my.pop();
+my.pop();
+console.log(my);
+console.log(my.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"];
 
-let st = 'Elzero Web School';
+console.log(my.slice(-counter, counter)); // ["Elham", "Mazero"]
 
-if ((st.length * 2).toString() === '34') {
-  console.log('34 Good');
-}
+console.log(
+  'Elham'.slice(0, -3).concat('Mazero'.reverse().slice(0, -3).reverse()),
+); // "Elzero"
 
-// W position may change
-
-if (st.indexOf('w')) {
-  console.log(st.indexOf);
-  console.log("'w' Good");
-}
-
-// !== 'string'
-
-if (st !== 'string') {
-  console.log("!== 'string' = Good");
-}
-
-// === "number"
-if (typeof st.length === 'number') {
-  console.log('=== "number" = Good');
-}
-
-// === "ElzeroElzero"
-
-if (st.substr(0, 6).repeat(2) === 'ElzeroElzero') {
-  console.log('=== "ElzeroElzero"');
-}
+//console.log(); // "rO"
