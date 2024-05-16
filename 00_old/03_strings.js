@@ -7,13 +7,13 @@ console.log(
     a.slice(1, -1).toUpperCase() +
     a.substr(-1).toLocaleLowerCase(),
 );
-console.log(a.substr(0, 6) + ' ' + a.substr(11, 6));
+/* console.log(a.substr(0, 6) + ' ' + a.substr(11, 6));
 console.log(a.slice(2, 3).toUpperCase() + a.slice(3, 6));
 console.log(a.slice(-4, -3).toUpperCase().repeat(8));
 
 console.log(string.startsWith('h'));
 console.log(string.substring(-3));
-console.log(string.substring(string.length - 3));
+console.log(string.substring(string.length - 3)); */
 console.log(string.split());
 console.log(string.split(''));
 console.log(string.slice(1, -1));

@@ -1,22 +1,18 @@
+// 60 - Function Default Parameters
 /*
-  Array Challenge
+  Function
+  - Default Function Parameters
+  - Function Parameters Default [Undefined]
+  - Old Strategies [Condition + Logical Or]
+  - ES6 Method
 */
 
-let zero = 0;
+function sayHello(username = 'Unknown', age = 'Unknown') {
+  // if (age === undefined) {
+  //   age = "Unknown";
+  // }
+  // age = age || "Unknown";
+  return `Hello ${username} Your Age Is ${age}`;
+}
 
-let counter = 3;
-
-let my = ['Ahmed', 'Mazero', 'Elham', 'Osama', 'Gamal', 'Ameer'];
-
-// Write Code Here
-console.log(my);
-my.pop();
-my.pop();
-console.log(my);
-console.log(my.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"];
-
-console.log(my.slice(-counter, counter)); // ["Elham", "Mazero"]
-
-console.log('Elham'.slice(zero, -counter).concat('Mazero'[2])); // "Elzero"
-
-//console.log(); // "rO"
+console.log(sayHello());
