@@ -1,25 +1,20 @@
-// 64 - Anonymous Function And Practice
+// 67 - Scope - Global And Local
 /*
-  Function
-  - Anonymous Function
-  - Calling Named Function vs Anonymous Function
-  - Argument To Other Function
-  - Task Without Name
-  - SetTimeout
+  Scope
+  - Global And Local Scope
 */
 
-let calculator = function (num1, num2) {
-  return num1 + num2;
-};
+var a = 1;
+let b = 2;
 
-console.log(calculator(10, 20));
-
-function sayHello() {
-  console.log('Hello Osama');
+function showText() {
+  var a = 10;
+  let b = 20;
+  console.log(`Function - From Local ${a}`);
+  console.log(`Function - From Local ${b}`);
 }
 
-document.getElementById('show').onclick = sayHello;
+console.log(`From Global ${a}`);
+console.log(`From Global ${b}`);
 
-setTimeout(function elzero() {
-  console.log('Good');
-}, 2000);
+showText();
