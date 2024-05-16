@@ -1,19 +1,25 @@
-// 63 - CHALLENGE Random Arguments Function
+// 64 - Anonymous Function And Practice
 /*
-  Function - Random Argument Challenge
-  ====================================
-  Create Function showDetails
-  Function Accept 3 Parameters [a, b, c]
-  Data Types For Info Is
-  - String => Name
-  - Number => Age
-  - Boolean => Status
-  Argument Is Random
-  Data Is Not Sorted Output Depend On Data Types
-  - Use Ternary Conditional Operator
+  Function
+  - Anonymous Function
+  - Calling Named Function vs Anonymous Function
+  - Argument To Other Function
+  - Task Without Name
+  - SetTimeout
 */
 
-showDetails('Osama', 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(38, 'Osama', true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(true, 38, 'Osama'); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(false, 'Osama', 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+let calculator = function (num1, num2) {
+  return num1 + num2;
+};
+
+console.log(calculator(10, 20));
+
+function sayHello() {
+  console.log('Hello Osama');
+}
+
+document.getElementById('show').onclick = sayHello;
+
+setTimeout(function elzero() {
+  console.log('Good');
+}, 2000);
