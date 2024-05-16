@@ -1,18 +1,28 @@
-// 60 - Function Default Parameters
+// 62 - Function Ultimate Practice
 /*
-  Function
-  - Default Function Parameters
-  - Function Parameters Default [Undefined]
-  - Old Strategies [Condition + Logical Or]
-  - ES6 Method
+  Function Advanced Practice
+  - Parameters
+  - Default
+  - Rest
+  - Loop
+  - Condition
 */
 
-function sayHello(username = 'Unknown', age = 'Unknown') {
-  // if (age === undefined) {
-  //   age = "Unknown";
-  // }
-  // age = age || "Unknown";
-  return `Hello ${username} Your Age Is ${age}`;
+function showInfo(us = 'Un', ag = 'Un', rt = 0, show = 'Yes', ...sk) {
+  document.write(`<div>`);
+  document.write(`<h2>Welcome, ${us}</h2>`);
+  document.write(`<p>Age: ${ag}</p>`);
+  document.write(`<p>Hour Rate: $${rt}</p>`);
+  if (show === 'Yes') {
+    if (sk.length > 0) {
+      document.write(`<p>Skills: ${sk.join(' | ')}</p>`);
+    } else {
+      document.write(`<p>Skills: No Skills</p>`);
+    }
+  } else {
+    document.write(`<p>Skills Is Hidden</p>`);
+  }
+  document.write(`</div>`);
 }
 
-console.log(sayHello());
+showInfo('Osama', 38, 20, 'No', 'Html', 'CSS');
