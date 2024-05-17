@@ -1,45 +1,30 @@
-// 74 - Higher Order Functions - Filter Practice
+// 75 - Higher Order Functions - Reduce
 
 /*
-  Filter
-  - Filter Longest Word By Number
+  - Reduce
+  --- method executes a reducer function on each element of the array,
+  --- resulting in a single output value.
+
+  Syntax
+  reduce(callBackFunc(Accumulator, Current Val, Current Index, Source Array) { }, initialValue)
+  - Accumulator => the accumulated value previously returned in the last invocation
+  - Current Val => The current element being processed in the array
+  - Index => The index of the current element being processed in the array.
+  ---------- Starts from index 0 if an initialValue is provided.
+  ---------- Otherwise, it starts from index 1.
+  - Array => The Current Array
 */
 
-// Filter Words More Than 4 Characters
-let sentence = 'I Love Foood Code Too Playing Much';
+let nums = [10, 20, 15, 30];
 
-let smallWords = sentence
-  .split(' ')
-  .filter(function (ele) {
-    return ele.length <= 4;
-  })
-  .join(' ');
+let add = nums.reduce(function (acc, current, index, arr) {
+  console.log(`Acc => ${acc}`);
+  console.log(`Current Element => ${current}`);
+  console.log(`Current Element Index => ${index}`);
+  console.log(`Array => ${arr}`);
+  console.log(acc + current);
+  console.log(`#############`);
+  return acc + current;
+}, 5);
 
-console.log(smallWords);
-
-// Ignore Numbers
-let ignoreNumbers = 'Elz123er4o';
-
-let ign = ignoreNumbers
-  .split('')
-  .filter(function (ele) {
-    return isNaN(parseInt(ele));
-  })
-  .join('');
-
-console.log(ign);
-
-// Filter Strings + Multiply
-let mix = 'A13BS2ZX';
-
-let mixedContent = mix
-  .split('')
-  .filter(function (ele) {
-    return !isNaN(parseInt(ele));
-  })
-  .map(function (ele) {
-    return ele * ele;
-  })
-  .join('');
-
-console.log(mixedContent);
+console.log(add);
