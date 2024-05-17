@@ -1,44 +1,45 @@
-// 73 - Higher Order Functions - Filter
+// 74 - Higher Order Functions - Filter Practice
 
 /*
-  - Filter
-  --- method creates a new array
-  --- with all elements that pass the test implemented by the provided function.
-
-  Syntax filter(callBackFunction(Element, Index, Array) { }, thisArg)
-  - Element => The current element being processed in the array.
-  - Index => The index of the current element being processed in the array.
-  - Array => The Current Array
+  Filter
+  - Filter Longest Word By Number
 */
 
-// Get Friends With Name Starts With A
-let friends = ['Ahmed', 'Sameh', 'Sayed', 'Asmaa', 'Amgad', 'Israa'];
+// Filter Words More Than 4 Characters
+let sentence = 'I Love Foood Code Too Playing Much';
 
-let filterdFriends = friends.filter(function (el) {
-  return el.startsWith('A') ? true : false;
-});
+let smallWords = sentence
+  .split(' ')
+  .filter(function (ele) {
+    return ele.length <= 4;
+  })
+  .join(' ');
 
-console.log(filterdFriends);
+console.log(smallWords);
 
-// Get Even Numbers Only
-let numbers = [11, 20, 2, 5, 17, 10];
+// Ignore Numbers
+let ignoreNumbers = 'Elz123er4o';
 
-let evenNumbers = numbers.filter(function (el) {
-  return el % 2 === 0;
-});
+let ign = ignoreNumbers
+  .split('')
+  .filter(function (ele) {
+    return isNaN(parseInt(ele));
+  })
+  .join('');
 
-console.log(evenNumbers);
+console.log(ign);
 
-// Test Map vs Filter
+// Filter Strings + Multiply
+let mix = 'A13BS2ZX';
 
-// let addMap = numbers.map(function (el) {
-//   return el + el;
-// });
+let mixedContent = mix
+  .split('')
+  .filter(function (ele) {
+    return !isNaN(parseInt(ele));
+  })
+  .map(function (ele) {
+    return ele * ele;
+  })
+  .join('');
 
-// console.log(addMap);
-
-// let addFilter = numbers.filter(function (el) {
-//   return el + el;
-// });
-
-// console.log(addFilter);
+console.log(mixedContent);
