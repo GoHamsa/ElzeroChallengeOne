@@ -1,5 +1,5 @@
 // 78 - Higher Order Functions - Challenge
-//..
+//.
 /*
   Higher Order Functions Challenges
 
@@ -42,6 +42,7 @@ console.log(
     })),
 ); // Elzero Web School
 /*
+
 console.log(
   (solution = myString.map().reduce(function (acc, current) {
     return acc === current ? acc : acc + current;
