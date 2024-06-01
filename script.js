@@ -1,5 +1,5 @@
 // 78 - Higher Order Functions - Challenge
-//.
+//..
 /*
   Higher Order Functions Challenges
 
